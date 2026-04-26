@@ -91,13 +91,12 @@ def build_sidebar():
     return html.Div([
         # Logo area
         html.Div([
-            html.Div([
-                html.Div("P", className="logo-letter"),
-            ], className="logo-mark"),
+            html.Img(src="/assets/proton-logo.png", className="proton-logo-img", alt="Proton Bakers"),
             html.Div([
                 html.Div("ProtonIQ", className="logo-text"),
                 html.Div("Business Intelligence", className="logo-sub"),
-            ]),
+                html.Div("by MA TechHub", className="logo-iq-badge"),
+            ], className="logo-text-wrap"),
         ], className="sidebar-logo"),
 
         html.Div("INTELLIGENCE MODULES", className="nav-section-label"),
@@ -127,6 +126,7 @@ def build_header(active_id):
                 ], className="live-indicator"),
                 html.Div("Proton Bakers (Pvt) Ltd", className="company-badge"),
                 html.Div("Q1 2025 · Fiscal Year", className="date-badge"),
+                html.Img(src="/assets/proton-logo.png", className="header-proton-logo", alt="Proton Bakers"),
             ], className="header-right"),
         ], className="header-inner"),
     ], className="page-header")
